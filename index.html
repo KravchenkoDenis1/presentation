@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="#fisrt">
+					<h1>ajax/spa</h1>
+				</section>
+				<section>
+					<ol>
+						<li>Classic model</li>
+						<li>AJAX</li>
+						<li>Using AJAX</li>
+						<li>SPA</li>
+					</ol>
+				</section>
+				<section class="past">
+					<h2>Classic Model</h2>
+					<section class="present">
+						<img src="img/classic_model.gif">
+					</section>
+				</section>
+				<section>
+					<h2>AJAX model</h2>
+					<section>
+						<img src="img/ajax_model.gif">
+					</section>
+				</section>
+				<section>
+					<h2>How it works</h2>
+					<section>
+						<span>
+							Create new 'XMLHttpRequest' object
+						</span>
+						<pre><code data-trim data-noescape>
+							let ajax = new XMLHttpRequest();
+						</code></pre>
+						<span>
+							define 'onreadystatechange';
+						</span>
+						<pre><code data-trim data-noescape>
+							ajax.onreadystatechange = function() {
+							  if (ajax.readyState == 4 && ajax.status == 200){
+							    //do something
+							  }
+							};
+							ajax.open('GET', /* url */, true);
+							ajax.send();
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>Example</h2>
+					<section><a href="./example/index.html">example</a></section>
+				</section>
+				<section>
+					<h1>SPA</h1>
+				</section>
+				<section>
+					<ol>
+						<li>Search engine optimization</li>
+						<li>Browser history</li>
+						<li>Speed of initial load</li>
+					</ol>
+				</section>
+				<section>
+					<h1>Thanks for attention</h1>
+					<section>
+						<span>
+							Subscribe to my channel:)
+						</span>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
